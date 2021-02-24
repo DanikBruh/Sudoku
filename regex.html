@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Regex</title>
+    <style>
+    
+    </style>
+</head>
+<body>
+    
+    
+    <form action="">
+        <input type="text" name="text" pattern="[a-zA-Z0-9]{5,}" required>
+    </form>
+
+    <script type="text/javascript">
+        
+        // var re = new RegExp("ab+c");
+
+        // 1
+        console.log('ahb acb aeb aeeb adcb axeb'.match(/a\wb/g));
+
+        // 2
+        console.log('aba aca aea abba adca abea'.match(/a\w{2}a/g));
+
+        // 3
+        console.log('aa aba abba abbba abca abea'.match(/ab+a/g));
+
+        // 4
+        console.log('aa aba abba abbba abca abea'.match(/ab*a/g));
+
+        // 5
+        console.log('a.a aba aea'.match(/a[^a-z s]a/g));
+
+        // 6
+        console.log('23 2+3 2++3 2+++3 345 567'.match(/2\++3/g));
+
+        // 7
+        console.log('aba accca azzza wwwwa'.replace(/a\w+a/g, '!'));
+
+        // 9
+        console.log('aa aba abba abbba abbbba abbbbba'.match(/ab{2,4}a/g));
+
+        // 10
+        console.log('a1a a2a a3a a4a a5a aba aca'.match(/a[0-9]a/g));
+
+        // 11
+        console.log('aba aea aca aza axa'.match(/a[^c z]a/g));
+
+        // 12
+        console.log('aAXa aeffa aGha aza ax23a a3sSa'.match(/a[a-z]+a/g));
+
+    </script>
+</body>
+</html>
